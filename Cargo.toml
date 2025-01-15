@@ -1,0 +1,24 @@
+[package]
+name = "kovi-plugin-live-agent"
+version = "0.1.0"
+edition = "2021"
+description = "A QQ chatbot powered by Kovi with Bilibili live and OpenAI integration."
+license-file = "LICENSE"
+repository = "https://github.com/realzhujunhao/momo-bot"
+exclude = [
+    "update.sh"
+]
+
+
+[dependencies]
+kovi = "0.11" 
+serde = { version = "1", features = ["derive"] }
+toml = "0"
+thiserror = "2"
+serde_json = "1"
+reqwest = { version = "0", features = ["json"] }
+rand = "0"
+indoc = "2"
+regex = "1"
+sqlx = { version = "0", features = ["runtime-tokio", "sqlite"] }
+time = { version = "0", features = ["macros", "formatting"] }
