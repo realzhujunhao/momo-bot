@@ -1,5 +1,7 @@
 # Momo Bot
 
+[![Crates.io](https://img.shields.io/crates/v/kovi-plugin-live-agent.svg)](https://crates.io/crates/kovi-plugin-live-agent) [![Documentation](https://docs.rs/kovi-plugin-live-agent/badge.svg)](https://docs.rs/kovi-plugin-live-agent) [![Crates.io](https://img.shields.io/crates/d/kovi-plugin-live-agent.svg)](https://crates.io/crates/kovi-plugin-live-agent)
+
 Momo Bot是基于Kovi框架的群助手。
 
 ```toml
