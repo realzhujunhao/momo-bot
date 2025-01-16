@@ -369,7 +369,7 @@ impl AgentSetting {
     }
 
     pub fn unmute(&self) {
-        self.mute.store(true, std::sync::atomic::Ordering::Release);
+        self.mute.store(false, std::sync::atomic::Ordering::Release);
     }
 
     pub fn is_mute(&self) -> bool {
