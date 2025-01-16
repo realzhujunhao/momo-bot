@@ -1,8 +1,7 @@
 //! Detect group message and respond to commands.
 
 use kovi::{tokio::fs, Message, MsgEvent};
-use std::{
-    sync::Arc,
+use std::{ sync::Arc,
     time::{SystemTime, UNIX_EPOCH},
 };
 

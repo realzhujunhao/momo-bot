@@ -143,20 +143,18 @@ pub async fn subscribe_live() {
                     let bot = global_state::get_bot();
                     match live.get_switch() {
                         LiveSwitch::On => {
-                            std_info!("Live switch: On");
                             // used to be online, send msg only if offline
                             if !room.data.is_streaming {
-                                std_info!("is not streaming, offline notification");
+                                std_info!("not streaming, offline notification");
                                 let msg = Message::new().add_text(&live.offline_msg);
                                 bot.send_group_msg(group_id, msg);
                                 live.set_switch(LiveSwitch::Off);
                             }
                         }
                         LiveSwitch::Off => {
-                            std_info!("Live switch: Off");
                             // used to be offline, send msg only if online
                             if room.data.is_streaming {
-                                std_info!("is streaming, online notification");
+                                std_info!("streaming, online notification");
                                 let resp = formatdoc!(
                                     "
                                     {}

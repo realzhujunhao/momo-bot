@@ -1,6 +1,6 @@
 [package]
 name = "kovi-plugin-live-agent"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "A QQ chatbot powered by Kovi with Bilibili live and OpenAI integration."
 license-file = "LICENSE"
