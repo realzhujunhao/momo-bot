@@ -235,20 +235,6 @@ impl AgentSetting {
             .json(&payload)
             .send()
             .await?;
-        let resp_str = response.text().await.unwrap();
-        std_info!(
-            "
-            OpenAI response:
-            {resp_str}
-            "
-        );
-        let response = client
-            .post(&self.api_url)
-            .header(CONTENT_TYPE, "application/json")
-            .header(AUTHORIZATION, format!("Bearer {}", self.api_key))
-            .json(&payload)
-            .send()
-            .await?;
         Ok(response.json().await?)
     }
 
